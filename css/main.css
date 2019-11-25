@@ -53,29 +53,6 @@
 	margin-bottom: 2.5em;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
-/* SCSS variables and mixins */
-/* Some styles to make this demo look pretty (or at least decent) If you want to style everything yourself, you shouldn't need these */
- body {
-	 padding: 1em;
-	 background: #eee;
-	 color: #444;
-	 font-family: 'Roboto', sans-serif;
-	 font-weight: 100;
-}
- body a {
-	 text-decoration: none;
-	 color: #444;
-}
-
- body div {
-	 box-sizing: border-box;
-}
-
-div .item-content {
-	margin: 1em 4em;
-}
-
  .tabbed-content {
 	 background: #fff;
 	 max-width: 100%;
@@ -119,14 +96,7 @@ div .item-content {
 	 -ms-transition: opacity 0.3s ease-in-out;
 	 transition: opacity 0.3s ease-in-out;
 }
- @media all and (min-width: 800px) {
-	 .item.active .item-content {
-		 padding-top: 0;
-	}
-	 .tabs-side .tabs li {
-		 margin-bottom: 2px;
-	}
-}
+
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
 	 display: none;
@@ -138,14 +108,15 @@ div .item-content {
 	 content: attr(data-title);
 }
  .tabbed-content .item .item-content,  .tabbed-content .item .item-content div {
-	 opacity: 0;
-	 visibility: hidden;
-	 height: 0;
+	 display: none;
 }
+
+.tabbed-content .item .item-content [class*="col-"]{
+	margin: 0;
+}
+
  .tabbed-content .item.active .item-content,  .tabbed-content .item.active .item-content div {
-	 opacity: 1;
-	 visibility: visible;
-	 height: auto;
+	display: block;
 }
  @media all and (min-width: 800px) {
 	 .tabbed-content .tabs {
@@ -172,6 +143,54 @@ div .item-content {
 	}
 	 .tabbed-content.tabs-side .item {
 		 margin-left: 150px;
+	}
+	 
+    .item.active .item-content {
+       padding-top: 0;
+  }
+   .tabs-side .tabs li {
+       margin-bottom: 2px;
+  }
+}
+
+#mobile{
+	
+	position: fixed;
+	width: 100%;
+	top: 0;
+	
+}
+
+#mobile div {
+	display: none;
+}
+ 
+button{
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 0;
+    text-indent: 200%;
+    overflow: hidden;
+    background: rgba(255,255,255,.8) url(https://i.imgur.com/vKRaKDX.png) center no-repeat;
+	border: 1px solid #ddd;
+    border-radius: 3px;
+    background-size: 80%;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    transition: all 400ms ease;
+}
+    
+@media all and (min-width: 768px){
+	#mobile div{
+		display: block;
+	}
+	#mobile {
+		position: static;
+	}
+	button{
+		display: none;
 	}
 }
 
