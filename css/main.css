@@ -36,6 +36,48 @@
         - Size
 
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4.0 - ELEMENTS
+-------------------------------------------------------------- */
+
+/* -- MEDIA -- */
+
+#hero{
+	background-image:url("../img/hero.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+#side_tab1 .img, #side_tab2 .img, #side_tab3 .img, #side_tab4 .img, #side_tab5 .img  {
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+}
+
+#side_tab1 .img {
+	background-image:url("../img/five-day-img.jpg");
+}
+
+#side_tab2 .img {
+	background-image:url("../img/four-day-img.jpg");
+}
+
+#side_tab3 .img {
+	background-image:url("../img/three-day-img.jpg");
+}
+
+#side_tab4 .img {
+	background-image:url("../img/two-day-img.jpg");
+}
+
+#side_tab5 .img {
+	background-image:url("../img/half-day-img.jpg");
+}
+
+/* -- TYPOGRAPHY -- */
+
+
+
 
 /*--------------------------------------------------------------
 5.0 - OBJECTS
@@ -44,10 +86,10 @@
 /* -- FRAMEWORK -- */
 
 /* div element that contains the map */
-#map {
-  height: 200px;
-  width: 100%;  
- }
+
+body > header{
+	padding: 50px 0 300px 0;
+}
 
 #about-us > div > section:nth-child(4){
 	margin-bottom: 2.5em;
@@ -97,6 +139,10 @@
 	 transition: opacity 0.3s ease-in-out;
 }
 
+[class*="col-"] {
+	padding: 0;
+}
+
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
 	 display: none;
@@ -118,7 +164,7 @@
  .tabbed-content .item.active .item-content,  .tabbed-content .item.active .item-content div {
 	display: block;
 }
- @media all and (min-width: 800px) {
+ @media all and (min-width: 768px) {
 	 .tabbed-content .tabs {
 		 display: block;
 	}
@@ -134,15 +180,8 @@
 	 .tabbed-content .item::before {
 		 display: none;
 	}
-	 .tabbed-content.tabs-side .tabs {
-		 width: 150px;
-		 float: left;
-	}
 	 .tabbed-content.tabs-side .tabs li {
 		 display: block;
-	}
-	 .tabbed-content.tabs-side .item {
-		 margin-left: 150px;
 	}
 	 
     .item.active .item-content {
@@ -151,19 +190,10 @@
    .tabs-side .tabs li {
        margin-bottom: 2px;
   }
-}
-
-#mobile{
-	
-	position: fixed;
-	width: 100%;
-	top: 0;
 	
 }
 
-#mobile div {
-	display: none;
-}
+
  
 button{
 	position: absolute;
@@ -182,19 +212,43 @@ button{
     transition: all 400ms ease;
 }
     
-@media all and (min-width: 768px){
-	#mobile div{
+
+/*--------------------------------------------------------------
+6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+
+#map {
+  height: 200px;
+  width: 100%;  
+ }
+
+/* -- NAVIGATION -- */
+
+#mobile{
+	
+	position: fixed;
+	width: 100%;
+	top: 0;
+	
+}
+
+#mobile div {
+	display: none;
+}
+
+@media all and (min-width: 768px) {
+	
+	 #mobile div{
 		display: block;
 	}
 	#mobile {
 		position: static;
+		display: block;
 	}
 	button{
 		display: none;
 	}
 }
-
-
-
 
 

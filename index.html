@@ -11,13 +11,15 @@
 
 <body>
 	<!--target body element navy-->
-	<header><!--img goes here-->
+	<header id="hero"><!--img goes here-->
 		<div class="wrapper">
-			<img src="" alt="">
+			<div class="row">
+				<img class="col-lg-1" src="img/logo.svg" alt="logo">
+			</div>
 			<div class="row">
 				<div class="col-md-6">
 				  <p>A learn to surf journey</p>
-				  <p><a>Get ready for your surf adventure.</a>Sit back and relax after we pick you up from your accommodation.</p>
+				  <p><a href="http://www.theinertia.com/surf/8-awesome-ways-to-prepare-for-a-surf-trip/ " target="_blank">Get ready for your surf adventure.</a>Sit back and relax after we pick you up from your accommodation.</p>
 				</div>
 			<div class="col-md-6">
 				
@@ -25,10 +27,10 @@
 					<button>Toggle</button>
 					<div>
 						<ul>
-						  <li><a href="our-services">Our Services</a></li>
-						  <li><a href="about-us">About Us</a></li>
-						  <li><a href="our-team">Our Team</a></li>
-						  <li><a href="contact-us">Contact</a></li>
+						  <li><a href="#our-services">Our Services</a></li>
+						  <li><a href="#about-us">About Us</a></li>
+						  <li><a href="#our-team">Our Team</a></li>
+						  <li><a href="#contact-us">Contact</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -37,13 +39,13 @@
 		</div>
 	</header>
 	<div class="wrapper">
-		<section id="our-services"> <!--our services, add id-->
+		<section id="our-services"> <!--our services-->
 			<header>
 			  <h2>Our<br><span>Services</span></h2>
 			</header>
 			
 			<div class="tabbed-content tabs-side row">
-	  <nav class="tabs col-lg-2">
+	  <nav class="tabs col-md-3 col-lg-2">
 		<ul>
 		  <li><a href="#side_tab1" class="active">5 day</a></li>
 		  <li><a href="#side_tab2">4 day</a></li>
@@ -52,10 +54,11 @@
 		  <li><a href="#side_tab5">1/2 day</a></li>
 		</ul>
 	  </nav>
-	<div class="col-lg-10">
+	<div class="col-md-9 col-lg-10">
 	  <div id="side_tab1" class="item active" data-title="Tab 1">
 		<div class="item-content">
-			<img alt="" src="https://via.placeholder.com/800x250" class="img-responsive">
+			<div class="img">
+			</div>
 			<p>5 Day Deluxe Package</p>
 			<p>$320</p>
 			<div class="row">
@@ -71,13 +74,14 @@
 					</ul>
 				</div>
 			</div>
-			<p><a href="">Buy Now</a></p>
+			<p><a href="https://www.shopify.com/" target="_blank">Buy Now</a></p>
 		</div>
 	  </div>
 	
 	  <div id="side_tab2" class="item" data-title="Tab 2">
 		<div class="item-content">
-		  <img alt="" src="https://via.placeholder.com/800x250" class="img-responsive">
+		  <div class="img">
+			</div>
 			<p>4 Day Epic Surf Experience</p>
 			<p>$185</p>
 			<div class="row">
@@ -92,12 +96,13 @@
 					</ul>
 				</div>
 			</div>
-			<p><a href="">Buy Now</a></p>
+			<p><a href="https://www.shopify.com/" target="_blank">Buy Now</a></p>
 		</div>
 	  </div>
 	  <div id="side_tab3" class="item" data-title="Tab 3">
 		<div class="item-content">
-		  <img alt="" src="https://via.placeholder.com/800x250" class="img-responsive">
+		  	<div class="img">
+			</div>
 			<p>3 Day Ultimate Wave Rider </p>
 			<p>$320</p>
 			<div class="row">
@@ -113,12 +118,13 @@
 					</ul>
 				</div>
 			</div>
-			<p><a href="">Buy Now</a></p>
+			<p><a href="https://www.shopify.com/" target="_blank">Buy Now</a></p>
 		</div>
 	  </div>
 	   <div id="side_tab4" class="item" data-title="Tab 4">
 		<div class="item-content">
-		  <img alt="" src="https://via.placeholder.com/800x250" class="img-responsive">
+		  	<div class="img">
+			</div>
 			<p>2 Day Progressive Lesson</p>
 			<p>$115</p>
 			<div class="row">
@@ -133,12 +139,13 @@
 					</ul>
 				</div>
 			</div>
-			<p><a href="">Buy Now</a></p>
+			<p><a href="https://www.shopify.com/" target="_blank">Buy Now</a></p>
 		</div>
 	  </div>
 	   <div id="side_tab5" class="item" data-title="Tab 5">
 		<div class="item-content">
-		  <img alt="" src="https://via.placeholder.com/800x250" class="img-responsive">
+		  	<div class="img">
+			</div>
 			<p>1/2 Day Learn to Surf Adventure</p>
 			<p>$65</p>
 			<div class="row">
@@ -153,7 +160,7 @@
 					</ul>
 				</div>
 			</div>
-			<p><a href="">Buy Now</a></p>
+			<p><a href="https://www.shopify.com/" target="_blank">Buy Now</a></p>
 		</div>
 	  </div>
 	</div>	
@@ -186,22 +193,22 @@
 				 </div>
 		</section>
 
-		<div> <!--email-->
+		 <!--email-->
 			<p>Subscribe to our e-news !</p>
-			<form class="row">
-				<label>email</label> <!--hide-->
-				<input type="email" name="email" id="email" placeholder="email">
-				<p><a href="">Submit</a></p> <!--make inline block-->
-			</form>
-		</div>
+        <form> <!-- change display type-->
+            <label>email</label> <!--hide-->
+            <input type="email" name="email" id="email" placeholder="email">
+            <p><a href="">Submit</a></p> <!--make inline block-->
+        </form>
+	
 
 		<section id="about-us"> <!--about us, add id-->
 			<header>
 				<h2>About<br><span>Us</span></h2>
 			</header>
 			<div class="row">
-				<section class="col-lg-4 col-md-6 col-sm-12">
-					<img src="" alt="">
+				<section class=" col-sm-12 col-md-6 col-lg-4 ">
+					<img src="img/about-mission.jpg" alt="" data-rjs="2" class="img-responsive">
 					<header><h3>Our Misson</h3></header>
 					<p>We cultivate a love and respect for the ocean by building confidence, developing character and inspiring stoke through safety, fun and learning.</p>
 				</section>
@@ -254,10 +261,10 @@
 			<div class="col-md-6 col-sm-12">
 				<!--The div element for the map -->
 				<div id="map"></div> <!--div for map-->
-				<p>5B Whaanga Rd, Raglan 3297</p>
-				<p>New Zealand<br>+64 7-825 7873</p>
+				<adress><p>5B Whaanga Rd, Raglan 3297</p></adress>
+				<p>New Zealand<br><a href="tel:64-7-825-7873">+64 7-825 7873</a></p>
 			</div>
-			<section class="col-md-6 col-sm-12 contact-us">
+			<section id="contact-us" class="col-md-6 col-sm-12">
 				<header>
 					<h2>Contact<br>us</h2>
 				</header>
@@ -272,25 +279,30 @@
 							<input type="text" name="last-name" id="last-name">
 						</div>
 					</div>
-					<div>
-						<label>Subject</label>
-						<input type="text" name="subject" id="subject">
-					</div>
-					<div>
-						<label>Message</label>
-						<input type="text" name="message" id="message">
-					</div>
+					
+                    <label>Subject</label>
+                    <input type="text" name="subject" id="subject">
+
+                    <label>Message</label>
+                    <input type="text" name="message" id="message">
+					<p><a href="">Submit</a></p>
 				</form>
-				<p><a href="">Submit</a></p>
+				
 			</section>
 		</div>
 	</div> <!--wrapper-->
 	<footer>
-		<img src="" alt="">
-		<ul>
-			<li><a href="">facebook</a></li>
-			<li><a href="">instagram</a></li>
-		</ul>
+		<wrapper class="row">
+			<div>
+				<img src="" alt="logo">
+			</div>
+			<div>
+				<ul>
+					<li><a href="https://www.facebook.com" target="_blank">facebook</a></li>
+					<li><a href="https://www.instagram.com" target="_blank">instagram</a></li>
+				</ul>
+			</div>
+		</wrapper>
 	</footer>	
 	
 	
