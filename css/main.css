@@ -73,7 +73,24 @@
 #side_tab5 .img {
 	background-image:url("../img/half-day-img.jpg");
 }
+@media all and (min-width: 768px) {
+    div #our-team-image{
+        background-image: url("../img/our-team-img.jpg");
+        position: absolute;
+        height: 300px;
+        width: 48%;
+        top: 0;
+        left: 0;
+		background-size: cover;
+		background-position: center;
+    }
+}
 
+@media all and (min-width: 1024px) {
+    div #our-team-image{    
+        width: 55%;
+    }
+}
 /* -- TYPOGRAPHY -- */
 
 
@@ -139,10 +156,6 @@ body > header{
 	 transition: opacity 0.3s ease-in-out;
 }
 
-[class*="col-"] {
-	padding: 0;
-}
-
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
 	 display: none;
@@ -193,7 +206,11 @@ body > header{
 	
 }
 
-
+#position-container{
+	position: relative;
+	top: 0;
+	left: 0;
+}
  
 button{
 	position: absolute;
@@ -249,6 +266,23 @@ button{
 	button{
 		display: none;
 	}
+}
+
+/*--------------------------------------------------------------
+7.0 - UTLITY
+-------------------------------------------------------------- */
+
+/*---ALIGNMENTS--- */
+
+.float-right{
+	float: right;
+}
+
+
+/*---COLORS--- */
+
+footer{
+	backround-color: black;
 }
 
 
