@@ -93,9 +93,59 @@
 }
 /* -- TYPOGRAPHY -- */
 
+html{
+	background-color: #061633;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	font-weight: 300;
+}
 
+h2, #hero div > div > div:nth-child(1) > p:nth-child(1), .btn{
+	text-transform: uppercase;
+}
 
+h2, #hero > div > div > div:nth-child(1) > p:nth-child(1){
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-weight:800;
+	font-size: 2rem;
+}
 
+h2 span, #hero > div > div > div:nth-child(1) > p:nth-child(1) span{
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-weight:300;
+}
+
+h3{
+	margin-bottom: 0;
+}
+
+#about-us p{
+	margin-top: .5em;
+}
+
+#hero > div > div > div:nth-child(1) > p:nth-child(1){
+	font-size: 3rem;
+}
+
+h2, #hero div > div > div:nth-child(1) > p:nth-child(1) {
+	line-height: 1em;
+}
+
+@media all and (min-width: 768px) {
+	html{
+		font-size: 1rem;
+		line-height: 1.6rem; 
+	}
+}
+
+@media all and (min-width: 1024px) {
+	html{
+		font-size: .9rem;
+		line-height: 1.4rem; 
+	}
+}
 /*--------------------------------------------------------------
 5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -105,7 +155,7 @@
 /* div element that contains the map */
 
 body > header{
-	padding: 50px 0 300px 0;
+	padding: 1em 0 2.5em 0;
 }
 
 #about-us > div > section:nth-child(4){
@@ -159,12 +209,14 @@ body > header{
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
 	 display: none;
+	 padding: 0;
 }
  .tabbed-content .item {
 	 min-height: 2em;
 }
  .tabbed-content .item::before {
 	 content: attr(data-title);
+	 text-align: center;
 }
  .tabbed-content .item .item-content,  .tabbed-content .item .item-content div {
 	 display: none;
@@ -206,29 +258,50 @@ body > header{
 	
 }
 
+
+
+
 #position-container{
 	position: relative;
 	top: 0;
 	left: 0;
 }
  
-button{
-	position: absolute;
-    top: 15px;
-    right: 15px;
-    border: 0;
+button {
+    position: absolute;
+    top: 0;
+    right: 5px;
     text-indent: 200%;
     overflow: hidden;
-    background: rgba(255,255,255,.8) url(https://i.imgur.com/vKRaKDX.png) center no-repeat;
-	border: 1px solid #ddd;
-    border-radius: 3px;
-    background-size: 80%;
-    width: 30px;
-    height: 30px;
+    background: url(https://i.imgur.com/vKRaKDX.png) center right no-repeat;
+    background-size: contain;
+    width: 103%;
+    height: 40px;
     outline: none;
     transition: all 400ms ease;
+	border: none;
 }
-    
+
+#about-us section{
+	margin-bottom: .5em;
+}
+
+.yellow-txt, h2 span, h3, form label{
+	color: #ecaf20;
+}
+
+.black-txt{
+	color: #000;
+}
+
+form label{
+	display: block;
+}
+
+form #e-news{
+	text-align: center;
+}
+
 
 /*--------------------------------------------------------------
 6.0 - COMPONENTS
@@ -247,6 +320,9 @@ button{
 	position: fixed;
 	width: 100%;
 	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 1;
 	
 }
 
@@ -254,20 +330,120 @@ button{
 	display: none;
 }
 
+#hero nav ul{
+    list-style-type: none;
+}
+
+#hero nav li{
+    text-align:center;  
+}
+
+#hero nav a{
+	color: #000;
+}
+
+#hero nav a:hover{
+	font-weight: 400;
+	color: #ecaf20;
+}
+
+
 @media all and (min-width: 768px) {
 	
 	 #mobile div{
-		display: block;
+		display: block !important;
 	}
 	#mobile {
 		position: static;
 		display: block;
+		background-color: transparent;
 	}
 	button{
 		display: none;
 	}
+	
+	#hero nav ul{
+	list-style-type: none;
 }
 
+	#hero nav ul li{
+		text-align:right;
+		color: #fff;
+	}
+	
+	#hero nav a{
+		color: #fff;
+		font-weight: 600;
+	}
+	
+	#hero nav a:hover{
+		color: #fff;
+		font-weight: 600;
+		border-bottom: .2em solid #ecaf20;	
+	}
+	
+}
+
+
+nav li{
+	padding-bottom: 2em;
+}
+
+/* -- Buttons -- */
+a{
+text-decoration: none;	
+}
+
+.btn{
+	color: #000;
+}
+
+.btn, .btn-white{
+	border-bottom: .2em solid #ecaf20;
+	font-weight: 600;
+}
+
+.btn:hover, .btn-white:hover{
+	background-color: #ecaf20;
+	padding: .7em 2em;
+	color: #fff;
+	font-weight: 600;
+}
+
+.btn-form{
+	color: white;
+}
+
+
+/* -- Sprites -- */
+ul span{
+	display:none;
+}
+
+footer ul{
+	list-style-type: none;
+	text-align: right;
+	text-decoration: none;
+	
+}
+
+footer li{
+	display: inline-block;
+	font-size:1.5rem;
+	margin-top: .5em;
+}
+
+footer li:first-child, footer li:nth-child(2){
+	margin-right: 1.5em;
+}
+
+footer a{
+	color: white;
+}
+
+footer a:hover{
+	color:#ecaf20;
+}
 /*--------------------------------------------------------------
 7.0 - UTLITY
 -------------------------------------------------------------- */
@@ -282,7 +458,13 @@ button{
 /*---COLORS--- */
 
 footer{
-	backround-color: black;
+	background-color: #000;
 }
 
+#our-services {
+	color: #000;
+}
 
+#our-services > div:nth-child(3), #our-services h2{
+	color: #fff;
+}
