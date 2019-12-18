@@ -40,57 +40,36 @@
 4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+:focus {
+    outline:0;
+	
+}
+
+/* -- FORMS -- */
+
+form label{
+	display: block;
+}
+
+form#e-news{
+	margin: 0 auto;
+	text-align: center;
+}
+
+form#e-news input{
+	float: none;
+}
+
+#e-news label, #e-news input, #e-news p:last-child {
+	display: inline-block;
+}
+
+form input{
+	width: 100%;
+}
 /* -- MEDIA -- */
 
-#hero{
-	background-image:url("../img/hero.jpg");
-	background-size: cover;
-	background-position: center;
-}
 
-#side_tab1 .img, #side_tab2 .img, #side_tab3 .img, #side_tab4 .img, #side_tab5 .img  {
-	background-position: center;
-	background-size: cover;
-	height: 250px;
-}
-
-#side_tab1 .img {
-	background-image:url("../img/five-day-img.jpg");
-}
-
-#side_tab2 .img {
-	background-image:url("../img/four-day-img.jpg");
-}
-
-#side_tab3 .img {
-	background-image:url("../img/three-day-img.jpg");
-}
-
-#side_tab4 .img {
-	background-image:url("../img/two-day-img.jpg");
-}
-
-#side_tab5 .img {
-	background-image:url("../img/half-day-img.jpg");
-}
-@media all and (min-width: 768px) {
-    div #our-team-image{
-        background-image: url("../img/our-team-img.jpg");
-        position: absolute;
-        height: 300px;
-        width: 48%;
-        top: 0;
-        left: 0;
-		background-size: cover;
-		background-position: center;
-    }
-}
-
-@media all and (min-width: 1024px) {
-    div #our-team-image{    
-        width: 55%;
-    }
-}
 /* -- TYPOGRAPHY -- */
 
 html{
@@ -121,16 +100,18 @@ h3{
 	margin-bottom: 0;
 }
 
-#about-us p{
-	margin-top: .5em;
-}
-
-#hero > div > div > div:nth-child(1) > p:nth-child(1){
-	font-size: 3rem;
-}
-
 h2, #hero div > div > div:nth-child(1) > p:nth-child(1) {
 	line-height: 1em;
+}
+
+#e-news > p{
+	font-weight:600;
+	font-size: 1.2rem;
+
+}
+
+footer{
+	background-color: #000;
 }
 
 @media all and (min-width: 768px) {
@@ -153,14 +134,6 @@ h2, #hero div > div > div:nth-child(1) > p:nth-child(1) {
 /* -- FRAMEWORK -- */
 
 /* div element that contains the map */
-
-body > header{
-	padding: 1em 0 2.5em 0;
-}
-
-#about-us > div > section:nth-child(4){
-	margin-bottom: 2.5em;
-}
 
  .tabbed-content {
 	 background: #fff;
@@ -208,7 +181,6 @@ body > header{
 
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
-	 display: none;
 	 padding: 0;
 }
  .tabbed-content .item {
@@ -218,7 +190,7 @@ body > header{
 	 content: attr(data-title);
 	 text-align: center;
 }
- .tabbed-content .item .item-content,  .tabbed-content .item .item-content div {
+ .tabbed-content .item .item-content,  .tabbed-content .item .item-content div, .tabbed-content .tabs {
 	 display: none;
 }
 
@@ -258,15 +230,23 @@ body > header{
 	
 }
 
-
-
-
-#position-container{
-	position: relative;
-	top: 0;
-	left: 0;
+/*--------------------------------------------------------------
+6.0 - COMPONENTS
+-------------------------------------------------------------- */
+body > header{
+	padding: 1em 0 2.5em 0;
 }
- 
+
+#hero{
+	background-image:url("../img/hero.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+#hero > div > div > div:nth-child(1) > p:nth-child(1){
+	font-size: 3rem;
+}
+
 button {
     position: absolute;
     top: 0;
@@ -286,33 +266,82 @@ button {
 	margin-bottom: .5em;
 }
 
-.yellow-txt, h2 span, h3, form label{
-	color: #ecaf20;
+#about-us p{
+	margin-top: .5em;
 }
 
-.black-txt{
-	color: #000;
+#about-us > div > section:nth-child(4){
+	margin-bottom: 2.5em;
 }
 
-form label{
-	display: block;
+#side_tab1 .img, #side_tab2 .img, #side_tab3 .img, #side_tab4 .img, #side_tab5 .img  {
+	background-position: center;
+	background-size: cover;
+	height: 250px;
 }
 
-form #e-news{
-	text-align: center;
+#side_tab1 .img {
+	background-image:url("../img/service-five-day.jpg");
 }
 
+#side_tab2 .img {
+	background-image:url("../img/service-four-day.jpg");
+}
 
-/*--------------------------------------------------------------
-6.0 - COMPONENTS
--------------------------------------------------------------- */
+#side_tab3 .img {
+	background-image:url("../img/service-three-day.jpg");
+}
 
+#side_tab4 .img {
+	background-image:url("../img/service-two-day.jpg");
+}
+
+#side_tab5 .img {
+	background-image:url("../img/service-half-day.jpg");
+}
+@media all and (min-width: 768px) {
+    div #our-team-image{
+        background-image: url("../img/our-team-img.jpg");
+        position: absolute;
+        height: 500px;
+        width: 48%;
+        top: 0;
+        left: 0;
+		background-size: cover;
+		background-position: center;
+		margin-top: 5em;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    div #our-team-image{    
+        width: 55%;
+    }
+}
 
 #map {
   height: 200px;
   width: 100%;  
  }
 
+
+#position-container{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#our-services {
+	color: #000;
+}
+
+#our-services > div:nth-child(3), #our-services h2{
+	color: #fff;
+}
+
+#our-team{
+	margin: 5em 0 20em;
+}
 /* -- NAVIGATION -- */
 
 #mobile{
@@ -343,7 +372,6 @@ form #e-news{
 }
 
 #hero nav a:hover{
-	font-weight: 400;
 	color: #ecaf20;
 }
 
@@ -377,8 +405,6 @@ form #e-news{
 	}
 	
 	#hero nav a:hover{
-		color: #fff;
-		font-weight: 600;
 		border-bottom: .2em solid #ecaf20;	
 	}
 	
@@ -457,14 +483,10 @@ footer a:hover{
 
 /*---COLORS--- */
 
-footer{
-	background-color: #000;
+.yellow-txt, h2 span, h3, form label{
+	color: #ecaf20;
 }
 
-#our-services {
+.black-txt{
 	color: #000;
-}
-
-#our-services > div:nth-child(3), #our-services h2{
-	color: #fff;
 }
